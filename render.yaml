@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: synapse-server
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start --workspace=server
+    healthCheckPath: /health
+    envVars:
+      - key: CLIENT_ORIGIN
+        sync: false # set this to your deployed Vercel client URL after it's up

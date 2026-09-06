@@ -219,8 +219,25 @@ npm run lint         # zero errors (2 informational TanStack Virtual warnings)
 The client reads `VITE_WS_URL` (see `client/.env.example`) so it can point at a remote server; the
 server reads `PORT` and `CLIENT_ORIGIN`.
 
-- **Server** → any Node host (Render, Railway, Fly.io): build `npm install`, start `npm start -w server`, set `CLIENT_ORIGIN` to your client's URL.
-- **Client** → Vercel or Netlify: build `npm run build -w client`, publish `client/dist`, set `VITE_WS_URL` to `wss://<your-server-host>/ws`.
+> ⚠️ **The server cannot run on Vercel, Netlify Functions, or any other serverless platform.** It
+> holds persistent WebSocket connections and runs background timers (`setInterval`) forever —
+> serverless functions are request/response only and will crash it (`FUNCTION_INVOCATION_FAILED`).
+> The server needs a host that keeps a process running: **Render** or **Railway**. The **client**
+> (a static Vite build) is exactly what Vercel/Netlify are built for — deploy those two pieces
+> separately.
+
+**1. Server → Render** (a `render.yaml` Blueprint is included at the repo root):
+1. On [render.com](https://render.com), **New → Blueprint**, connect this GitHub repo — Render reads `render.yaml` and configures the service automatically.
+2. Deploy. Note the resulting URL, e.g. `https://synapse-server.onrender.com`.
+
+**2. Client → Vercel:**
+1. **New Project**, import this repo, set **Root Directory** to `client`.
+2. Add an environment variable: `VITE_WS_URL` = `wss://<your-render-url>/ws` (note `wss://`, and the `/ws` path).
+3. Deploy. Note the resulting URL, e.g. `https://synapse-devops.vercel.app`.
+
+**3. Close the loop:** back on Render, set the `CLIENT_ORIGIN` env var to your Vercel URL from step 2
+and restart the service — until this is set, the server's CORS lock defaults to `localhost` and will
+reject the deployed client's requests.
 
 ## ⚠️ Known limitations
 
