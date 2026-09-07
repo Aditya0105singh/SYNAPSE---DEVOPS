@@ -11,7 +11,7 @@ A persona-driven incident engine streams server-health events, structured error 
 [![Node.js](https://img.shields.io/badge/Node.js-Express%20%2B%20ws-339933?logo=node.js&logoColor=white)](server/package.json)
 [![Tests](https://img.shields.io/badge/tests-29%20passing-2ea44f)](#-testing)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](#-license)
-[![Live Demo](https://img.shields.io/badge/live%20demo-vercel-black?logo=vercel)](https://synapse-devops-client-fs8clwjks.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/live%20demo-vercel-black?logo=vercel)](https://synapse-devops-client.vercel.app/)
 
 </div>
 
@@ -38,7 +38,7 @@ A persona-driven incident engine streams server-health events, structured error 
 
 | | |
 |---|---|
-| **Live app** | [synapse-devops-client-fs8clwjks.vercel.app](https://synapse-devops-client-fs8clwjks.vercel.app/) |
+| **Live app** | [synapse-devops-client.vercel.app](https://synapse-devops-client.vercel.app/) |
 | **API / server health** | [synapse-devops.onrender.com/health](https://synapse-devops.onrender.com/health) |
 | **Repository** | [github.com/Aditya0105singh/SYNAPSE---DEVOPS](https://github.com/Aditya0105singh/SYNAPSE---DEVOPS) |
 
