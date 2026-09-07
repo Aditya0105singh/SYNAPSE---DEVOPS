@@ -11,6 +11,7 @@ A persona-driven incident engine streams server-health events, structured error 
 [![Node.js](https://img.shields.io/badge/Node.js-Express%20%2B%20ws-339933?logo=node.js&logoColor=white)](server/package.json)
 [![Tests](https://img.shields.io/badge/tests-29%20passing-2ea44f)](#-testing)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](#-license)
+[![Live Demo](https://img.shields.io/badge/live%20demo-vercel-black?logo=vercel)](https://synapse-devops-client-fs8clwjks.vercel.app/)
 
 </div>
 
@@ -32,6 +33,17 @@ A persona-driven incident engine streams server-health events, structured error 
   Good shots to capture: the Issues view mid-incident (a CRITICAL row + lit-up
   alert bell), the incident timeline open, and the command palette.
 -->
+
+## 🔗 Live links
+
+| | |
+|---|---|
+| **Live app** | [synapse-devops-client-fs8clwjks.vercel.app](https://synapse-devops-client-fs8clwjks.vercel.app/) |
+| **API / server health** | [synapse-devops.onrender.com/health](https://synapse-devops.onrender.com/health) |
+| **Repository** | [github.com/Aditya0105singh/SYNAPSE---DEVOPS](https://github.com/Aditya0105singh/SYNAPSE---DEVOPS) |
+
+> The server runs on Render's free tier, which spins down after ~15 minutes idle — the first
+> request after a quiet period can take 30-60s to wake it up. Give it a moment on first load.
 
 ## 📋 Table of contents
 

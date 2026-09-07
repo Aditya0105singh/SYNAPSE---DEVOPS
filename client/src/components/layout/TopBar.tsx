@@ -110,9 +110,9 @@ function UserMenu() {
         <MenuTrigger asChild>
           <button className="flex items-center gap-2 rounded-md border border-surface-border bg-surface-2 px-2.5 py-1.5 text-[13px] font-medium text-ink-body">
             <span className="grid h-5 w-5 place-items-center rounded-full bg-accent text-[10px] font-bold text-white">
-              AH
+              AS
             </span>
-            ACHMAD HAKIM
+            ADITYA SINGH
             <ChevronDown size={13} className="text-ink-faint" />
           </button>
         </MenuTrigger>
@@ -138,12 +138,12 @@ function UserMenu() {
       >
         <div className="flex items-center gap-3 rounded-md bg-surface-2 p-3">
           <span className="grid h-10 w-10 place-items-center rounded-full bg-accent text-[14px] font-bold text-white">
-            AH
+            AS
           </span>
           <div>
-            <div className="text-[13px] font-semibold text-ink-hi">Achmad Hakim</div>
+            <div className="text-[13px] font-semibold text-ink-hi">Aditya Singh</div>
             <div className="text-[11px] text-ink-mute">Site Reliability Engineer · On-call (primary)</div>
-            <div className="text-[11px] text-ink-faint">achmad@sparkpixel.dev</div>
+            <div className="text-[11px] text-ink-faint">aditya@sparkpixel.dev</div>
           </div>
         </div>
       </AppDialog>
